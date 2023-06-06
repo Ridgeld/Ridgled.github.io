@@ -1,5 +1,5 @@
-var username = document.getElementById('nick').value;
-var password = document.getElementById('pass').value;
+const username = document.getElementById('nick').value;
+const password = document.getElementById('pass').value;
 const btn1 = document.getElementById('btn1');
       btn1.addEventListener('click', function() {
         if (username === '1') {
