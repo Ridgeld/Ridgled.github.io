@@ -455,24 +455,37 @@ body{
     color:#6C6868;
 }
 table {
+    color:#fff;
+    margin-top:40px;
+    margin-left:5%;
     border-collapse: collapse;
     width: 100%;
+    border-radius: 10px; 
+    overflow: hidden; 
+    font-size: 15px;
 }
-    
+
 th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
+    text-align:center;
+    padding: 3px;
+    /*text-align: left;*/
 }
-      
+th:first-child,
+td:first-child {
+    width: 30px; /* Установка ширины первого столбца */
+}
+th:nth-child(3),
+td:nth-child(3) {
+    width: 150px; /* Установка ширины первого столбца */
+}   
 th {
-    background-color: #f2f2f2;
+    background-color: #1E2D82;
 }
       
 tr:nth-child(even) td {
-    background-color: #f9f9f9;
+    background-color:#2538A2;
 }
       
 tr:nth-child(odd) td {
-    background-color: #dcdcdc;
+    background-color: #1E2D82;
 }
