@@ -5,7 +5,8 @@ const btn1 = document.getElementById('btn1');
 //         window.location.href = 'menu.html';
         if (username === 'admin' && password === '12345') {
           window.location.href = 'database.html';
-        } else {
+        } 
+        if (username === '1') {
           window.location.href = 'menu.html';
         }
 });
