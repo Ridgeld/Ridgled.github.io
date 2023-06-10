@@ -150,7 +150,7 @@ body{
 .nick{
     margin-top:10%;
     padding-left:10px;
-    margin-left:9%;
+    margin-left:5%;
     border:none;
     outline:0;
     box-sizing: border-box;
@@ -174,7 +174,7 @@ body{
 .pass{
     margin-top:10px;
     padding-left:10px;
-    margin-left:9%;
+    margin-left:5%;
     border:none;
     outline:0;
     box-sizing: border-box;
