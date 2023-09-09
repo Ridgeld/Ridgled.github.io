@@ -101,34 +101,34 @@ function loadTimetable(jsonFile, dayOfWeek) {
                 // Если день недели найден, отобразите его уроки
                 const lessons = dayData.lessons;
                 lessons.forEach(урок => {
+                    // Создайте контейнер для урока
                     const lessonContainer = document.createElement("div");
                     lessonContainer.className = "lesson_container";
-
+                
                     // Создайте div с классом "circle" перед названием урока
                     const circleDiv = document.createElement("div");
                     circleDiv.className = "circle";
                     lessonContainer.appendChild(circleDiv);
-
-                    // Создайте div с классом "lesson_info" для названия урока и времени
+                
+                    // Создайте div с классом "lesson_info" для названия, времени и кабинета
                     const lessonInfoDiv = document.createElement("div");
                     lessonInfoDiv.className = "lesson_info";
                     lessonContainer.appendChild(lessonInfoDiv);
-
+                
                     // Создайте div с классом "lesson_name" для названия урока
                     const lessonNameDiv = document.createElement("div");
                     lessonNameDiv.className = "lesson_name";
                     lessonNameDiv.textContent = урок.name;
-
+                
+                    // Проверьте текст урока и добавьте классы "lesson_name_green", "lesson_time_green" и "lesson_room_green" при необходимости
                     if (урок.name === "Классный час") {
-                        circleDiv.classList.add("circle_green");
                         lessonNameDiv.classList.add("lesson_name_green");
                         lessonTimeDiv.classList.add("lesson_time_green");
                         lessonRoomDiv.classList.add("lesson_room_green");
                     }
-
+                
                     lessonInfoDiv.appendChild(lessonNameDiv);
-
-
+                
                     // Создайте div с классом "lesson_time" для времени урока
                     const lessonTimeDiv = document.createElement("div");
                     lessonTimeDiv.className = "lesson_time";
