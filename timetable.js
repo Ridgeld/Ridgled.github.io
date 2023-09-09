@@ -1,9 +1,21 @@
+let first = document.getElementById("1");
+let second = document.getElementById("2");
+let third = document.getElementById("3");
+let fourth = document.getElementById("4");
+let fiveth = document.getElementById("5");
+
+
+let name = document.getElementById("name");
+let time = document.getElementById("time");
+let room = document.getElementById("room");
+
+
 // Загрузка JSON-файла с расписанием
 fetch('timetable.json')
     .then(response => response.json())
     .then(data => {
         // Получите контейнер, в который вы хотите добавить lesson_container
-        const container = document.getElementById("place");
+        const scheduleContainer = document.getElementById("place");
 
         // Переберите уроки и создайте для каждого lesson_container
         for (const день in data) {
@@ -38,11 +50,13 @@ fetch('timetable.json')
                     // Создайте div с классом "lesson_room" для кабинета
                     const lessonRoomDiv = document.createElement("div");
                     lessonRoomDiv.className = "lesson_room";
-                    lessonRoomDiv.textContent = `Кабинет: ${урок.кабинет}`;
+                    lessonRoomDiv.textContent = урок.кабинет;
                     lessonContainer.appendChild(lessonRoomDiv);
 
-                    container.appendChild(lessonContainer);
+                    scheduleContainer.appendChild(lessonContainer);
                 });
             }
         }
     });
+
+
