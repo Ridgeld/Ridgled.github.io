@@ -11,6 +11,7 @@ let room = document.getElementById("room");
 
 
 // Загрузка JSON-файла с расписанием
+first.addEventListener('click', () => {
 fetch('schedule.json')
     .then(response => response.json())
     .then(data => {
@@ -58,3 +59,4 @@ fetch('schedule.json')
             }
         }
     });
+});
