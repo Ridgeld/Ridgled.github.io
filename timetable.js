@@ -118,15 +118,12 @@ function loadTimetable(jsonFile, dayOfWeek) {
                     // Создайте div с классом "lesson_name" для названия урока
                     const lessonNameDiv = document.createElement("div");
                     lessonNameDiv.className = "lesson_name";
-                    lessonNameDiv.textContent = урок.name;
                 
                     // Проверьте текст урока и добавьте классы "lesson_name_green", "lesson_time_green" и "lesson_room_green" при необходимости
                     if (урок.name === "Классный час") {
                         lessonNameDiv.classList.add("lesson_name_green");
-                        lessonTimeDiv.classList.add("lesson_time_green");
-                        lessonRoomDiv.classList.add("lesson_room_green");
                     }
-                
+                    lessonNameDiv.textContent = урок.name;
                     lessonInfoDiv.appendChild(lessonNameDiv);
                 
                     // Создайте div с классом "lesson_time" для времени урока
