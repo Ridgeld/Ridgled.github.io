@@ -135,6 +135,7 @@ function loadTimetable(jsonFile, dayOfWeek) {
                     lessonRoomDiv.textContent = урок.room;
                     lessonContainer.appendChild(lessonRoomDiv);
                     if (урок.name === "Классный час") {
+                        lessonContainer.classList.add("lesson_container_green");
                         circleDiv.classList.add("circle_green");
                         lessonNameDiv.classList.add("lesson_name_green");
                         lessonRoomDiv.classList.add("lesson_room_green");
