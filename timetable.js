@@ -17,11 +17,11 @@ fetch('timetable.json')
         // Получите контейнер, в который вы хотите добавить lesson_container
         const lessonPlace = document.getElementById("lesson_place");
 
-        // Переберите уроки и создайте для каждого lesson_container
-        for (const день in data) {
-            if (data.hasOwnProperty(день)) {
-                const уроки = data[день];
-                уроки.forEach(урок => {
+        // Переберите lesson и создайте для каждого lesson_container
+        for (const day in data) {
+            if (data.hasOwnProperty(day)) {
+                const lesson = data[day];
+                lesson.forEach(урок => {
                     const lessonContainer = document.createElement("div");
                     lessonContainer.className = "lesson_container";
 
@@ -38,19 +38,19 @@ fetch('timetable.json')
                     // Создайте div с классом "lesson_name" для названия урока
                     const lessonNameDiv = document.createElement("div");
                     lessonNameDiv.className = "lesson_name";
-                    lessonNameDiv.textContent = урок.название;
+                    lessonNameDiv.textContent = lesson.name;
                     lessonInfoDiv.appendChild(lessonNameDiv);
 
                     // Создайте div с классом "lesson_time" для времени урока
                     const lessonTimeDiv = document.createElement("div");
                     lessonTimeDiv.className = "lesson_time";
-                    lessonTimeDiv.textContent = урок.время;
+                    lessonTimeDiv.textContent = lesson.time;
                     lessonInfoDiv.appendChild(lessonTimeDiv);
 
                     // Создайте div с классом "lesson_room" для кабинета
                     const lessonRoomDiv = document.createElement("div");
                     lessonRoomDiv.className = "lesson_room";
-                    lessonRoomDiv.textContent = `Кабинет: ${урок.кабинет}`;
+                    lessonRoomDiv.textContent = `Кабинет: ${lesson.room}`;
                     lessonContainer.appendChild(lessonRoomDiv);
 
                     lessonPlace.appendChild(lessonContainer);
