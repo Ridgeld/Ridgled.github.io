@@ -2,10 +2,87 @@
 // Обработчики событий для кнопок
 document.getElementById('1').addEventListener('click', function () {
     loadTimetable('timetable.json', 'Понедельник');
+    this.classList.toggle('clicked');
+    document.getElementById('line1').classList.toggle('lineClick');
+
+
+    document.getElementById('2').classList.remove('clicked');
+    document.getElementById('3').classList.remove('clicked');
+    document.getElementById('4').classList.remove('clicked');
+    document.getElementById('5').classList.remove('clicked');
+
+    document.getElementById('line2').classList.remove('lineClick');
+    document.getElementById('line3').classList.remove('lineClick');
+    document.getElementById('line4').classList.remove('lineClick');
+    document.getElementById('line5').classList.remove('lineClick');
+
 });
 
 document.getElementById('2').addEventListener('click', function () {
     loadTimetable('timetable.json', 'Вторник');
+    this.classList.toggle('clicked');
+    document.getElementById('line2').classList.toggle('lineClick');
+
+
+    document.getElementById('1').classList.remove('clicked');
+    document.getElementById('3').classList.remove('clicked');
+    document.getElementById('4').classList.remove('clicked');
+    document.getElementById('5').classList.remove('clicked');
+
+    document.getElementById('line1').classList.remove('lineClick');
+    document.getElementById('line3').classList.remove('lineClick');
+    document.getElementById('line4').classList.remove('lineClick');
+    document.getElementById('line5').classList.remove('lineClick');
+});
+
+document.getElementById('3').addEventListener('click', function () {
+    loadTimetable('timetable.json', 'Среда');
+    this.classList.toggle('clicked');
+    document.getElementById('line3').classList.toggle('lineClick');
+
+
+    document.getElementById('1').classList.remove('clicked');
+    document.getElementById('2').classList.remove('clicked');
+    document.getElementById('4').classList.remove('clicked');
+    document.getElementById('5').classList.remove('clicked');
+
+    document.getElementById('line1').classList.remove('lineClick');
+    document.getElementById('line2').classList.remove('lineClick');
+    document.getElementById('line4').classList.remove('lineClick');
+    document.getElementById('line5').classList.remove('lineClick');
+});
+document.getElementById('4').addEventListener('click', function () {
+    loadTimetable('timetable.json', 'Четверг');
+    this.classList.toggle('clicked');
+    document.getElementById('line4').classList.toggle('lineClick');
+
+
+    document.getElementById('1').classList.remove('clicked');
+    document.getElementById('2').classList.remove('clicked');
+    document.getElementById('3').classList.remove('clicked');
+    document.getElementById('5').classList.remove('clicked');
+
+    document.getElementById('line1').classList.remove('lineClick');
+    document.getElementById('line2').classList.remove('lineClick');
+    document.getElementById('line3').classList.remove('lineClick');
+    document.getElementById('line5').classList.remove('lineClick');
+});
+
+document.getElementById('5').addEventListener('click', function () {
+    loadTimetable('timetable.json', 'Пятница');
+    this.classList.toggle('clicked');
+    document.getElementById('line5').classList.toggle('lineClick');
+
+
+    document.getElementById('1').classList.remove('clicked');
+    document.getElementById('2').classList.remove('clicked');
+    document.getElementById('4').classList.remove('clicked');
+    document.getElementById('5').classList.remove('clicked');
+
+    document.getElementById('line1').classList.remove('lineClick');
+    document.getElementById('line2').classList.remove('lineClick');
+    document.getElementById('line4').classList.remove('lineClick');
+    document.getElementById('line5').classList.remove('lineClick');
 });
 
 // Загрузка и отображение расписания
@@ -41,7 +118,16 @@ function loadTimetable(jsonFile, dayOfWeek) {
                     const lessonNameDiv = document.createElement("div");
                     lessonNameDiv.className = "lesson_name";
                     lessonNameDiv.textContent = урок.name;
+
+                    if (урок.name === "Классный час") {
+                        circleDiv.classList.add("circle_green");
+                        lessonNameDiv.classList.add("lesson_name_green");
+                        lessonTimeDiv.classList.add("lesson_time_green");
+                        lessonRoomDiv.classList.add("lesson_room_green");
+                    }
+
                     lessonInfoDiv.appendChild(lessonNameDiv);
+
 
                     // Создайте div с классом "lesson_time" для времени урока
                     const lessonTimeDiv = document.createElement("div");
