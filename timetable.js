@@ -12,7 +12,7 @@ let room = document.getElementById("room");
 
 // Загрузка JSON-файла с расписанием
 first.addEventListener('click', () => {
-fetch('schedule.json')
+fetch('timetable.json')
     .then(response => response.json())
     .then(data => {
         // Получите контейнер, в который вы хотите добавить lesson_container
