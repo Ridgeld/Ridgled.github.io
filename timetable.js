@@ -1,27 +1,15 @@
-let first = document.getElementById("1");
-let second = document.getElementById("2");
-let third = document.getElementById("3");
-let fourth = document.getElementById("4");
-let fiveth = document.getElementById("5");
-
-
-let name = document.getElementById("name");
-let time = document.getElementById("time");
-let room = document.getElementById("room");
-
-
 // Загрузка JSON-файла с расписанием
 fetch('timetable.json')
     .then(response => response.json())
     .then(data => {
         // Получите контейнер, в который вы хотите добавить lesson_container
-        const lessonPlace = document.getElementById("place");
+        const container = document.getElementById("place");
 
-        // Переберите lesson и создайте для каждого lesson_container
-        for (const day in data) {
-            if (data.hasOwnProperty(day)) {
-                const lesson = data[day];
-                lesson.forEach(lessons => {
+        // Переберите уроки и создайте для каждого lesson_container
+        for (const день in data) {
+            if (data.hasOwnProperty(день)) {
+                const уроки = data[день];
+                уроки.forEach(урок => {
                     const lessonContainer = document.createElement("div");
                     lessonContainer.className = "lesson_container";
 
@@ -38,22 +26,22 @@ fetch('timetable.json')
                     // Создайте div с классом "lesson_name" для названия урока
                     const lessonNameDiv = document.createElement("div");
                     lessonNameDiv.className = "lesson_name";
-                    lessonNameDiv.textContent = lessons.name;
+                    lessonNameDiv.textContent = урок.название;
                     lessonInfoDiv.appendChild(lessonNameDiv);
 
                     // Создайте div с классом "lesson_time" для времени урока
                     const lessonTimeDiv = document.createElement("div");
                     lessonTimeDiv.className = "lesson_time";
-                    lessonTimeDiv.textContent = lessons.time;
+                    lessonTimeDiv.textContent = урок.время;
                     lessonInfoDiv.appendChild(lessonTimeDiv);
 
                     // Создайте div с классом "lesson_room" для кабинета
                     const lessonRoomDiv = document.createElement("div");
                     lessonRoomDiv.className = "lesson_room";
-                    lessonRoomDiv.textContent = lessons.room;
+                    lessonRoomDiv.textContent = `Кабинет: ${урок.кабинет}`;
                     lessonContainer.appendChild(lessonRoomDiv);
 
-                    lessonPlace.appendChild(lessonContainer);
+                    container.appendChild(lessonContainer);
                 });
             }
         }
