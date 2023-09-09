@@ -15,7 +15,7 @@ fetch('timetable.json')
     .then(response => response.json())
     .then(data => {
         // Получите контейнер, в который вы хотите добавить lesson_container
-        const lessonPlace = document.getElementById("lesson_place");
+        const lessonPlace = document.getElementById("place");
 
         // Переберите lesson и создайте для каждого lesson_container
         for (const day in data) {
