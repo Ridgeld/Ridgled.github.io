@@ -40,19 +40,19 @@ function loadTimetable(jsonFile, dayOfWeek) {
                     // Создайте div с классом "lesson_name" для названия урока
                     const lessonNameDiv = document.createElement("div");
                     lessonNameDiv.className = "lesson_name";
-                    lessonNameDiv.textContent = lessons.name;
+                    lessonNameDiv.textContent = урок.name;
                     lessonInfoDiv.appendChild(lessonNameDiv);
 
                     // Создайте div с классом "lesson_time" для времени урока
                     const lessonTimeDiv = document.createElement("div");
                     lessonTimeDiv.className = "lesson_time";
-                    lessonTimeDiv.textContent = lessons.time;
+                    lessonTimeDiv.textContent = урок.time;
                     lessonInfoDiv.appendChild(lessonTimeDiv);
 
                     // Создайте div с классом "lesson_room" для кабинета
                     const lessonRoomDiv = document.createElement("div");
                     lessonRoomDiv.className = "lesson_room";
-                    lessonRoomDiv.textContent = lessons.room;
+                    lessonRoomDiv.textContent = урок.room;
                     lessonContainer.appendChild(lessonRoomDiv);
 
                     container.appendChild(lessonContainer);
@@ -63,3 +63,6 @@ function loadTimetable(jsonFile, dayOfWeek) {
 
 // По умолчанию загрузите расписание для понедельника
 loadTimetable('timetable.json', 'Понедельник');
+
+
+
