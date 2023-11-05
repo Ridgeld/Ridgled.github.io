@@ -1,5 +1,5 @@
 function addItems(){ 
-    fetch('/json/task_items.json')
+    fetch('json/task_items.json')
     .then(response => response.json())
     .then(data => {
         // Получите массив дат и соответствующих заданий
