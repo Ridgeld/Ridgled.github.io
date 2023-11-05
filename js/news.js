@@ -1,5 +1,5 @@
 function news() {
-    fetch('/json/news.json')
+    fetch('json/news.json')
         .then(response => response.json())
         .then(data => {
             // Получите массив дат и соответствующих заданий
