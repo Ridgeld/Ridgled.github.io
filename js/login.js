@@ -3,18 +3,17 @@ const loginInput = document.getElementById('login'); // предположим, 
 const passwordInput = document.getElementById('password'); // предположим, что у вас есть поле ввода с id "password"
 
 
-button.addEventListener('click', function() { 
+function login(){
     const login = loginInput.value.toLowerCase();
     const password = passwordInput.value;
     if (!login) {
-        alert_place.innerHTML = "Введите логин";
         return
     }
     if (!password) {
-        alert_place.innerHTML = "Введите пароль";
         return
     } 
-    fetch('json/users.json')
+    // fetch('json/users.json')
+    fetch('http://elmektep-online.wuaze.com/users.json')
     .then(response => response.json())
     .then(data => {
     // Получите значения из полей ввода для логина и пароля
@@ -28,10 +27,16 @@ button.addEventListener('click', function() {
         // Если пароль совпадает, получите третий элемент для этого логина
         const name = data[login].name;
         const class_name = data[login].class_name;
+        const gender = data[login].gender;
 
         // Сохраните третий элемент в localStorage
         localStorage.setItem('name', name);
         localStorage.setItem('class', class_name);
+        localStorage.setItem('gender', gender);
+        if (data[login].admin === "true"){
+          localStorage.setItem('admin', true);
+        }
+
         window.location.href = "account.html";
       } 
       else {
@@ -63,5 +68,6 @@ button.addEventListener('click', function() {
     // else {
     //     alert.innerHTML = "Пользователь не найден";
     //     return
-    // }  
-});
+    // } 
+} 
+button.addEventListener('click', login);
