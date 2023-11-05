@@ -12,8 +12,8 @@ function login(){
     if (!password) {
         return
     } 
-    // fetch('json/users.json')
-    fetch('https://elmektep-online.wuaze.com/users.json')
+    fetch('json/users.json')
+    // fetch('https://elmektep-online.wuaze.com/users.json')
     .then(response => response.json())
     .then(data => {
     // Получите значения из полей ввода для логина и пароля
