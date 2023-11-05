@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="images/icon.png"/>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/registration.css">
     <title>Эл мектеп</title>
 </head>
 <body>
@@ -27,15 +27,30 @@
                 </div>
                 <div class="block_2">
                     <div class="item_container">
-                        <div class="title">Добро пожаловать!</div>
-                        <section class="content_container">
-                            <div class="alert" id="alert_place"></div>
-                            <div class="inputs_container">
-                                <input type="text" placeholder="Введите имя пользователя" class="input_data" id="login">
-                                <input type="password" placeholder="Введите пароль" class="input_data" id="password">
+                        <div class="title">Заявка на регистрацию</div>
+                        <div class="description">Для регистрации необходимо написать сообщение и указать следующее</div>
+                        <section class="items">
+                            <div class="item_body">
+                                <div class="circle">1</div>
+                                <div class="item_text">Указать желаемое имя пользователя</div>
                             </div>
-                            <button class="button fill" id="check">Войти</button>
-                            <a href="#" class="forgot">Забыли пароль?</a>
+                            <div class="line_container">
+                                <div class="line"></div>
+                            </div>
+                            <div class="item_body">
+                                <div class="circle">2</div>
+                                <div class="item_text">Указать ваше имя и фамилию, а также класс</div>
+                            </div>
+                            <div class="line_container">
+                                <div class="line"></div>
+                            </div>
+                            <div class="item_body">
+                                <div class="circle">3</div>
+                                <div class="item_text">После одобрения заявки на регистрацию. Вам будет отправлено сообщение с вашим паролем. Используйте его для входа в аккаунт</div>
+                            </div>
+                        </section>
+                        <section class="content_container">
+                            <button class="button fill" id="send">Перейти к сообщению</button>
                         </section>
                     </div>
                 </div>
@@ -43,6 +58,6 @@
 
         </div>
     </div>
-    <script src="js/login.js"></script>
+    <script src="js/registration.js"></script>
 </body>
 </html>

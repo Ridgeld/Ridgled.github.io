@@ -2,11 +2,22 @@
     "даниэль": {
       "password" : "12390",
       "name" : "Мустафин Даниэль",
-      "class_name" : "11-Б"
+      "class_name" : "11-Б",
+      "gender" : "boy",
+      "admin" : "true"
     },
     "максим": {
       "password" : "789",
       "name" : "Евраш Максим",
-      "class_name" : "11-Б"
+      "class_name" : "11-Б",
+      "gender" : "boy",
+      "admin" : "false"
+    },
+    "арсений": {
+      "password" : "555",
+      "name" : "Минич Арсений",
+      "class_name" : "11-В",
+      "gender" : "boy",
+      "admin" : "false"
     }
 }

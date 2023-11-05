@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600&display=swap');
+*{
+    font-family: 'Noto-Sans', sans-serif;
+    font-weight: bold;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+.wrapper{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.header{
+    position: fixed;
+    display: flex;
+    width: calc(100% - 20px);
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    z-index: 2;
+}
+.logo_section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #308CFB;
+    gap: 2vh;
+}
+.logo_place{
+    display: flex;
+    align-items: center;
+    max-width: 20%;
+    max-height: 20%;
+}
+.logo_place svg{
+    min-width: 100%;
+    min-height: 100%;
+}
+.logo_title{
+    font-size:17px;
+}
+.page_name{
+    display: flex;
+    color: #318BFB;
+    font-weight: 500;
+}
+/* стиль страницы */
+.blocks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+.block_1{
+    display: flex;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+.block_1 img{
+    max-width: 200%;
+    margin-left: 21%;
+}
+.block_2{
+    display: flex;
+    width: 100%;
+    height: 30%;
+    background: #fff;
+}
+@media (min-width: 700px){
+    .blocks{
+        flex-direction: row;
+    }
+    .block_1{
+        width: 50%;
+        height: 100%;
+    }
+    .block_1 img{
+        max-width: 200%;
+        padding: 5% 0;
+        margin-left: 0;
+    }
+    .block_2{
+        width: 50%;
+        height: 100%;
+    }
+}
+.button_container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px;
+    padding: 0 10%;
+}
+.button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    background: #308CFB;
+    color: #fff;
+}
+.fill{
+    background: #308CFB;
+    color: #fff;
+}
+.stroke{
+    background: #fff;
+    color: #308CFB;
+    border: solid 1px #308CFB;
+}

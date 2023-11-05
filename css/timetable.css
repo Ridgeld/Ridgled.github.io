@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600&display=swap');
+*{
+    font-family: 'Noto-Sans', sans-serif;
+    font-weight: bold;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+.wrapper{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    height: 100%;
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.header{
+    position: fixed;
+    display: flex;
+    width: calc(100% - 20px);
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    z-index: 2;
+}
+.logo_section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #308CFB;
+    gap: 2vh;
+}
+.logo_place{
+    display: flex;
+    align-items: center;
+    max-width: 20%;
+    max-height: 20%;
+}
+.logo_place svg{
+    min-width: 100%;
+    min-height: 100%;
+}
+.logo_title{
+    font-size:17px;
+}
+.page_name{
+    display: flex;
+    color: #318BFB;
+    font-weight: 500;
+}
+.footer{
+    position: fixed;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    padding: 20px;
+    background: #fff;
+}
+.element{
+    max-width: 30px;
+    max-height: 30px;
+}
+.element svg{
+    min-width: 100%;
+}
+
+.item_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 60px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 150px;
+}
+.current_data{
+    display: flex;
+    width: 95%;
+    color: #2C8DF4;
+    font-size: 13px;
+    font-weight: 600;
+}
+.category_name{
+    display: flex;
+    width: 90%;
+    justify-content: flex-start;
+    align-items: center;
+    color: #2E8DF7;
+}
+.green{
+    background: #20CB9E;
+}
+.blue{
+    background: #496AFF;
+}
+.red{
+    fill: #F96D4F;
+    background: #F96D4F;
+}
+.yellow{
+    fill: #FCAD2C;
+    background: #FCAD2C;
+}
+/* Расписание */
+.week{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    overflow: hidden; 
+    gap:5px;
+}
+.day_container{
+    display: flex;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background: #C2DDFB;
+    color: #fff;
+    transition: 0.5s;
+}
+.active{
+    background: #318BFB;
+}
+.day{
+    font-size: 20px;
+    font-weight: 500;
+}
+.day_data{
+    font-size: 14px;
+    font-weight: 500;
+}
+/* Контейнер урока */
+.lesson_place{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+.lesson_container{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    gap: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.lesson_circle{
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #FFF;
+    opacity: 0.3;
+}
+.lesson_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+}
+.lesson_name{
+    color: #fff;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.lesson_time{
+    color: #fff;
+    opacity: 0.3;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.lesson_room{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1 0 0;
+    color: #fff;
+    opacity: 0.6;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+}
