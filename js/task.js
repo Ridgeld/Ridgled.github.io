@@ -59,7 +59,7 @@ if (lessonName in lessonJSONMap) {
 
 // Функция для загрузки JSON-файла
 function loadTimetable(jsonFile, class_name) {
-    fetch(`/json/${class_name}/task/${jsonFile}`)
+    fetch(`json/${class_name}/task/${jsonFile}`)
         .then(response => response.json())
         .then(data => {
             // Получите массив дат и соответствующих заданий
