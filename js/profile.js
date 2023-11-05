@@ -32,4 +32,4 @@ main_name.textContent = stored_name;
 name_place.textContent = stored_name;
 
 
-name_place.textContent = stored_name;
+class_name.textContent = stored_class;
