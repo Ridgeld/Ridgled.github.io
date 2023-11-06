@@ -19,5 +19,12 @@
       "class_name" : "11-В",
       "gender" : "boy",
       "admin" : "false"
+    },
+    "бектур":{
+        "password" : "347188",
+        "name" : "Жамалбеков Бектур",
+        "class_name" : "11-Б",
+        "gender" : "boy",
+        "admin" : "false"
     }
 }

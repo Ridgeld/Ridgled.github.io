@@ -32,7 +32,7 @@ if (lessonName in lessonQuotes) {
 const lessonJSONMap = {
     "алгебра" : "algebra.json",
     "геометрия" : "geometry.json",
-    "физика" : "phisics.json",
+    "физика" : "phisic.json",
     "химия" : "chemistry.json",
     "история" : "history.json",
     "биология" : "biology.json",
