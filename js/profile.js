@@ -5,7 +5,7 @@ const body = document.getElementById('body');
 
 if (stored_name) {
     // Загружаем данные из JSON файла
-    fetch('/json/users.json')
+    fetch('json/users.json')
         .then(response => response.json())
         .then(data => {
             // Поиск пользователя с совпадающим именем
