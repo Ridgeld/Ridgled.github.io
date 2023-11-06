@@ -99,7 +99,7 @@ function loadTimetable(jsonFile, class_name) {
                     lessonName === "кыргызский язык" || 
                     lessonName === "адабият") {
 
-                    lesson_body.classList.add('main blue');
+                    lesson_body.classList.add('main_blue');
                     news_content.classList.add('blue');
                 }
 

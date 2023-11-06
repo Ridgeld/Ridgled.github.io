@@ -164,19 +164,19 @@ body{
     opacity: 0.1;
 }
 .pattern_1{
-    background: url('/images/pattern/1.png');
+    background: url('images/pattern/1.png');
     background-size: cover;
 }
 .pattern_2{
-    background: url('/images/pattern/2.png');
+    background: url('images/pattern/2.png');
     background-size: cover;
 }
 .pattern_3{
-    background: url('/images/pattern/3.png');
+    background: url('images/pattern/3.png');
     background-size: cover;
 }
 .pattern_4{
-    background: url('/images/pattern/4.png');
+    background: url('images/pattern/4.png');
     background-size: cover;
 }
 .task_body::before,
