@@ -17,7 +17,8 @@ function addItems(){
             task_body.classList.add(class_name.class);
             const task_pattern = document.createElement('div');
             task_pattern.className = "task_pattern";
-            task_pattern.classList.add(`pattern_${class_name.pattern}`);
+            // task_pattern.classList.add(`pattern_${class_name.pattern}`);
+            task_pattern.innerHTML = "<img src='images/pattern/1.png'>";
 
             task_body.addEventListener("click", () => {
                 // Переадресация на task.html с передачей параметра "lessonName"
