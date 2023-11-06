@@ -1,4 +1,12 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const right = localStorage.getItem('name');
+  if (!right) {
+    window.location.href = 'login.html'; // Перенаправляем на страницу login.html, если class отсутствует
+  }
+});
+
 const stored_name = localStorage.getItem('name');
+
 const stored_class = localStorage.getItem('class');
 
 const name_place = document.getElementById('name_place');

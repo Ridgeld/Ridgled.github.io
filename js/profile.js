@@ -1,5 +1,6 @@
 const stored_name = localStorage.getItem('name');
 const stored_class = localStorage.getItem('class');
+const stored_gender = localStorage.getItem('gender');
 
 const body = document.getElementById('body');
 
@@ -27,9 +28,16 @@ if (stored_name) {
 const main_name = document.getElementById('main_name');
 const name_place = document.getElementById('name');
 const class_name = document.getElementById('class_name');
+const gender_place = document.getElementById('gender');
 
 main_name.textContent = stored_name;
 name_place.textContent = stored_name;
 
-
 class_name.textContent = stored_class;
+
+if (stored_gender === "boy") {
+    gender_place.textContent = "муж.";
+}
+if (stored_gender === "girl") {
+    gender_place.textContent = "жен."
+}

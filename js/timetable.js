@@ -71,6 +71,94 @@ for (let i = 1; i <= 7; i++) {
         }
     });
 }
+// loadTimetable('json/11-Б/timetable.json', 'ПН');
+// По умолчанию активируем кнопку "Понедельник" и загружаем расписание
+// document.getElementById('1').click();
+//   document.getElementById('1').classList.add('active'); // По умолчанию активируем кнопку "Понедельник"
+  
+//   loadTimetable('json/11_B/timetable.json', 'Понедельник'); // Загружаем расписание для понедельника при загрузке страницы
+//   // Обработчики событий для кнопок
+//   document.getElementById('1').addEventListener('click', function () {
+//       loadTimetable('json/11_B/timetable.json', 'Понедельник');
+//       this.classList.toggle('active');
+  
+//       document.getElementById('2').classList.remove('active');
+//       document.getElementById('3').classList.remove('active');
+//       document.getElementById('4').classList.remove('active');
+//       document.getElementById('5').classList.remove('active');
+//       document.getElementById('6').classList.remove('active');
+//       document.getElementById('7').classList.remove('active');
+//   });
+  
+//   document.getElementById('2').addEventListener('click', function () {
+//       loadTimetable('json/11_B/timetable.json', 'Вторник');
+//       this.classList.toggle('active');
+  
+  
+//       document.getElementById('1').classList.remove('active');
+//       document.getElementById('3').classList.remove('active');
+//       document.getElementById('4').classList.remove('active');
+//       document.getElementById('5').classList.remove('active');
+//       document.getElementById('6').classList.remove('active');
+//       document.getElementById('7').classList.remove('active');
+//   });
+  
+//   document.getElementById('3').addEventListener('click', function () {
+//       loadTimetable('json/11_B/timetable.json', 'Среда');
+//       this.classList.toggle('active');
+  
+//       document.getElementById('1').classList.remove('active');
+//       document.getElementById('2').classList.remove('active');
+//       document.getElementById('4').classList.remove('active');
+//       document.getElementById('5').classList.remove('active');
+//       document.getElementById('6').classList.remove('active');
+//       document.getElementById('7').classList.remove('active');
+//   });
+//   document.getElementById('4').addEventListener('click', function () {
+//       loadTimetable('json/11_B/timetable.json', 'Четверг');
+//       this.classList.toggle('active');
+  
+//       document.getElementById('1').classList.remove('active');
+//       document.getElementById('2').classList.remove('active');
+//       document.getElementById('3').classList.remove('active');
+//       document.getElementById('5').classList.remove('active');
+//       document.getElementById('6').classList.remove('active');
+//       document.getElementById('7').classList.remove('active');
+//   });
+  
+//   document.getElementById('5').addEventListener('click', function () {
+//       loadTimetable('json/11_B/timetable.json', 'Пятница');
+//       this.classList.toggle('active');
+  
+//       document.getElementById('1').classList.remove('active');
+//       document.getElementById('2').classList.remove('active');
+//       document.getElementById('3').classList.remove('active');
+//       document.getElementById('4').classList.remove('active');
+//       document.getElementById('6').classList.remove('active');
+//       document.getElementById('7').classList.remove('active');
+//   });
+//   document.getElementById('6').addEventListener('click', function () {
+//       loadTimetable('json/11_B/timetable.json', 'Суббота');
+//       this.classList.toggle('active');
+  
+//       document.getElementById('1').classList.remove('active');
+//       document.getElementById('2').classList.remove('active');
+//       document.getElementById('3').classList.remove('active');
+//       document.getElementById('4').classList.remove('active');
+//       document.getElementById('5').classList.remove('active');
+//       document.getElementById('7').classList.remove('active');
+//   });
+//   document.getElementById('7').addEventListener('click', function () {
+//     loadTimetable('json/11_B/timetable.json', 'Воскресенье');
+//     this.classList.toggle('active');
+  
+//     document.getElementById('1').classList.remove('active');
+//     document.getElementById('2').classList.remove('active');
+//     document.getElementById('3').classList.remove('active');
+//     document.getElementById('4').classList.remove('active');
+//     document.getElementById('5').classList.remove('active');
+//     document.getElementById('6').classList.remove('active');
+//   });
 function loadTimetable(jsonFile, dayOfWeek) {
       fetch(jsonFile)
           .then(response => response.json())
@@ -103,6 +191,10 @@ function loadTimetable(jsonFile, dayOfWeek) {
                         // Создайте div с классом "circle" перед названием урока
                         const circleDiv = document.createElement("div");
                         circleDiv.className = "lesson_circle";
+                        circleDiv.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 22 19" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 1C7 0.447715 6.55228 0 6 0C5.44772 0 5 0.447715 5 1V2H2C0.89543 2 0 2.89543 0 4V17C0 18.1046 0.89543 19 2 19H20C21.1046 19 22 18.1046 22 17V4C22 2.89543 21.1046 2 20 2H17V1C17 0.447715 16.5523 0 16 0C15.4477 0 15 0.447715 15 1V2H7V1ZM5 4V5C5 5.55228 5.44772 6 6 6C6.55228 6 7 5.55228 7 5V4H15V5C15 5.55228 15.4477 6 16 6C16.5523 6 17 5.55228 17 5V4H20V17H2V4H5ZM6 8.5C5.44772 8.5 5 8.94772 5 9.5C5 10.0523 5.44772 10.5 6 10.5H11.5C12.0523 10.5 12.5 10.0523 12.5 9.5C12.5 8.94772 12.0523 8.5 11.5 8.5H6ZM6 12.5C5.44772 12.5 5 12.9477 5 13.5C5 14.0523 5.44772 14.5 6 14.5H16C16.5523 14.5 17 14.0523 17 13.5C17 12.9477 16.5523 12.5 16 12.5H6Z" fill="#F8F8F8"/>
+                        </svg>`;
                         lessonContainer.appendChild(circleDiv);
                     
                         // Создайте div с классом "lesson_info" для названия, времени и кабинета

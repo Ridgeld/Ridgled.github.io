@@ -1,5 +1,5 @@
-function news() {
-    fetch('json/news.json')
+function news(stored_class) {
+    fetch(`json/${stored_class}/notifications.json`)
         .then(response => response.json())
         .then(data => {
             // Получите массив дат и соответствующих заданий
@@ -8,38 +8,38 @@ function news() {
             const containerElement = document.getElementById("container");
 
             // Пройдитесь по каждой паре дата-задание
-            dateTaskPairs.forEach(([date, news]) => {
+            dateTaskPairs.forEach(([date, text]) => {
                 // Создайте контейнер div для даты
-                const news_content = document.createElement('div');
-                news_content.className = "news_content";
+                const notification_content = document.createElement('div');
+                notification_content.className = "notification_content";
 
-                news_content.classList.add(news.color);
-                const news_info = document.createElement('div');
-                news_info.className = "news_info";
+                
+                const notification_info = document.createElement('div');
+                notification_info.className = "notification_info";
                
 
-                const news_data = document.createElement("div");
-                news_data.className = "news_data";
-                news_data.textContent = date;
+                const notification_data = document.createElement("div");
+                notification_data.className = "notification_data";
+                notification_data.textContent = date;
 
                 // Создайте элемент div для задания
-                const news_text = document.createElement("div");
-                news_text.className = "news_text";
-                news_text.innerHTML = news.news;
+                const notification_text = document.createElement("div");
+                notification_text.className = "notification_text";
+                notification_text.innerHTML = text.text;
 
                 // Установите текст элемента даты
 
                 // Добавьте элемент задания в контейнер даты
-                news_info.appendChild(news_data);
-                news_info.appendChild(news_text);
-                news_content.appendChild(news_info);
+                notification_info.appendChild(notification_data);
+                notification_info.appendChild(notification_text);
+                notification_content.appendChild(notification_info);
 
                 // Добавьте контейнер даты в основной контейнер
-                containerElement.appendChild(news_content);
+                containerElement.appendChild(notification_content);
             });
         })
         .catch(error => {
             console.error("Произошла ошибка при загрузке JSON-файла:", error);
         });
 }
-news();
+news(localStorage.getItem('class'));

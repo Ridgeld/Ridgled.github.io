@@ -32,7 +32,7 @@ if (lessonName in lessonQuotes) {
 const lessonJSONMap = {
     "алгебра" : "algebra.json",
     "геометрия" : "geometry.json",
-    "физика" : "phisic.json",
+    "физика" : "phisics.json",
     "химия" : "chemistry.json",
     "история" : "history.json",
     "биология" : "biology.json",
@@ -71,8 +71,8 @@ function loadTimetable(jsonFile, class_name) {
             // Пройдитесь по каждой паре дата-задание
             dateTaskPairs.forEach(([date, taskData]) => {
                 // Создайте контейнер div для даты
-                const task_container = document.createElement('div');
-                task_container.className = "task_body";
+                const news_content = document.createElement('div');
+                news_content.className = "news_content";
 
 
                 const lesson_body = document.getElementById('body');
@@ -81,7 +81,8 @@ function loadTimetable(jsonFile, class_name) {
                     lessonName === "физика" ||
                     lessonName === "химия") {
 
-                    lesson_body.classList.add('green');
+                    lesson_body.classList.add('main_green');
+                    news_content.classList.add('green');
                 }
                 if (lessonName === "история" ||
                     lessonName === "биология" ||
@@ -89,7 +90,8 @@ function loadTimetable(jsonFile, class_name) {
                     lessonName === "география" || 
                     lessonName === "дп") {
                     
-                    lesson_body.classList.add('red');
+                    lesson_body.classList.add('main_red');
+                    news_content.classList.add('red');
                 }
                 if (lessonName === "английский язык" ||
                     lessonName === "русский язык" ||
@@ -97,26 +99,48 @@ function loadTimetable(jsonFile, class_name) {
                     lessonName === "кыргызский язык" || 
                     lessonName === "адабият") {
 
-                    lesson_body.classList.add('blue');
+                    lesson_body.classList.add('main blue');
+                    news_content.classList.add('blue');
                 }
 
-                const dateContainer = document.createElement("div");
-                dateContainer.className = "task_date";
-                dateContainer.textContent = date;
+                // const dateContainer = document.createElement("div");
+                // dateContainer.className = "task_date";
+                // dateContainer.textContent = date;
+
+                // // Создайте элемент div для задания
+                // const taskElement = document.createElement("div");
+                // taskElement.className = "task_text";
+                // taskElement.textContent = taskData.task;
+
+                const news_info = document.createElement('div');
+                news_info.className = "news_info";
+               
+
+                const news_data = document.createElement("div");
+                news_data.className = "news_data";
+                news_data.textContent = date;
 
                 // Создайте элемент div для задания
-                const taskElement = document.createElement("div");
-                taskElement.className = "task_text";
-                taskElement.textContent = taskData.task;
+                const news_text = document.createElement("div");
+                news_text.className = "news_text";
+                news_text.innerHTML = taskData.task;
 
                 // Установите текст элемента даты
 
                 // Добавьте элемент задания в контейнер даты
-                task_container.appendChild(dateContainer);
-                task_container.appendChild(taskElement);
+                news_info.appendChild(news_data);
+                news_info.appendChild(news_text);
+                news_content.appendChild(news_info);
 
-                // Добавьте контейнер даты в основной контейнер
-                containerElement.appendChild(task_container);
+                // Установите текст элемента даты
+
+                // Добавьте элемент задания в контейнер даты
+                // task_container.appendChild(dateContainer);
+                // ne
+                // task_container.appendChild(news_info);
+
+                // // Добавьте контейнер даты в основной контейнер
+                containerElement.appendChild(news_content);
             });
         })
         .catch(error => {

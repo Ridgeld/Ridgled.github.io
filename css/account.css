@@ -61,6 +61,21 @@ body{
     color: #318BFB;
     font-weight: 500;
 }
+.notification{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.notification_circle{
+    position: absolute;
+    margin-right: -3px;
+    margin-top: -3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f94f4f;
+    border: 2px solid #fff;
+}
 .footer{
     position: fixed;
     display: flex;

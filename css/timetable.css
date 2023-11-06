@@ -138,6 +138,7 @@ body{
     background: #C2DDFB;
     color: #fff;
     transition: 0.5s;
+    user-select: none;
 }
 .active{
     background: #318BFB;
@@ -145,10 +146,12 @@ body{
 .day{
     font-size: 20px;
     font-weight: 500;
+    user-select: none;
 }
 .day_data{
     font-size: 14px;
     font-weight: 500;
+    user-select: none;
 }
 /* Контейнер урока */
 .lesson_place{
@@ -171,12 +174,14 @@ body{
     cursor: pointer;
 }
 .lesson_circle{
-    width: 32px;
-    height: 32px;
+    display: flex;
+    min-width: 40px;
+    min-height: 40px;
     flex-shrink: 0;
     border-radius: 50%;
-    background: #FFF;
-    opacity: 0.3;
+    background: rgba(255, 255, 255, 0.20);
+    align-items:center;
+    justify-content: center;
 }
 .lesson_info{
     display: flex;

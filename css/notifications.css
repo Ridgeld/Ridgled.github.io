@@ -122,39 +122,32 @@ body{
     color: #2E8DF7;
 }
 .green{
-    background: #1CCF9F;
+    background: rgba(28, 207, 159, 0.70);
 }
 .blue{
-    background: #318BFB;
+    background: rgba(49, 139, 251, 0.70);
 }
 .red{
-    background: #F96D4F;
+    background: rgba(249, 109, 79, 0.70);
 }
 .yellow{
-    background: #FCAD2C;
+    background: rgba(252, 173, 44, 0.70);
 }
-.info_body{
+.news_body{
     position: relative;
     display: flex;
     width: calc(100% - 40px);
-    height: 50px;
+    height: 120px;
     padding: 20px;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
     border-radius: 20px 20px 0 0;
-    /* background: #1CCF9F; */
+    background: #318BFB;
     overflow: hidden;
     gap:10px
 }
-.girl{
-    background: #F94F8C;
-}
-.boy{
-    background: #2C8DF4;
-}
-.info_body::before,
-.info_body::after {
+.news_body::before,
+.news_body::after {
   content: "";
   position: absolute;
   background: #fff; 
@@ -162,14 +155,14 @@ body{
   opacity: 0.1;
 }
 
-.info_body::before {
+.news_body::before {
   width: 250px;
   height: 250px;
   top: 50px;
   right: -50px;
 }
 
-.info_body::after {
+.news_body::after {
     width: 250px;
     height: 250px;
     bottom: 0;
@@ -185,34 +178,43 @@ body{
     font-size: 15px;
     font-weight: 500;
 }
-.info_items{
+.notification_items{
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    gap:10px;
 }
-.info_item_body{
+.notification_content{
     display: flex;
-    width: calc(100% - 20px);
-    min-height: 30px;
-    padding: 10px;
-    flex-direction: row;
-    justify-content: space-between;
+    padding: 20px;
     align-items: flex-start;
-    gap: 20px;
-    border-top: #C3DDF4 1px solid;
+    justify-content: flex-start;
+    align-self: stretch;
+    gap: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(48, 140, 251, 0.20);
 }
-.info_item_data{
-    color: #5eacff;
-    font-size: 13px;
-    font-weight: 600;
-}
-.info_item_text{
+.notification_info{
     display: flex;
-    width: 70%;
-    word-wrap: break-word;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+}
+.notification_data{
+    color: #2C8DF4;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.notification_text{
     color: #2C8DF4;
     font-size: 15px;
-    font-weight: 600;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }

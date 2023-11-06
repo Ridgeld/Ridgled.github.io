@@ -1,44 +1,58 @@
 {
     "Алгебра": {
-      "class" : "green"
+      "class" : "green",
+      "pattern" : "1"
     },
     "Геометрия": {
-        "class" : "green"
+        "class" : "green",
+        "pattern" : "1"
     },
     "Физика": {
-        "class" : "green"
+        "class" : "green",
+        "pattern" : "1"
     },
     "Химия": {
-        "class" : "green"
+        "class" : "green",
+        "pattern" : "1"
     },
     "Английский язык": {
-        "class" : "blue"
+        "class" : "blue",
+        "pattern" : "2"
     },
     "Русский язык": {
-        "class" : "blue"
+        "class" : "blue",
+        "pattern" : "2"
     },
     "Литература": {
-        "class" : "blue"
+        "class" : "blue",
+        "pattern" : "2"
     },
     "Кыргызский язык": {
-        "class" : "blue"
+        "class" : "blue",
+        "pattern" : "2"
     },
     "Адабият": {
-        "class" : "blue"
+        "class" : "blue",
+        "pattern" : "2"
     },
     "История": {
-        "class" : "red"
+        "class" : "red",
+        "pattern" : "4"
     },
     "Биология": {
-        "class" : "red"
+        "class" : "red",
+        "pattern" : "4"
     },
     "ЧиО": {
-        "class" : "red"
+        "class" : "red",
+        "pattern" : "4"
     },
     "География": {
-        "class" : "red"
+        "class" : "red",
+        "pattern" : "4"
     },
     "ДП": {
-        "class" : "red"
+        "class" : "red",
+        "pattern" : "4"
     }
 }
