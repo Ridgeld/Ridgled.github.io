@@ -218,7 +218,6 @@ body{
     justify-content: flex-start;
     align-self: stretch;
     gap: 10px;
-    border-radius: 10px;
     cursor: pointer;
     /* background: rgba(48, 140, 251, 0.70); */
 }
