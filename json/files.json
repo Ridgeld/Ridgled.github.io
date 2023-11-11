@@ -1,0 +1,27 @@
+[
+    {
+        "type": "file",
+        "files": [
+            {   
+                "name": "Solutions Advanced Keys",
+                "path": "files/AdvancedKey.pdf",
+                "subject": "english"
+            },
+            {   
+                "name": "Solutions Upper-Intermediate Keys",
+                "path": "files/UpperKey.rar",
+                "subject": "english"
+            },
+            {   
+                "name": "Биология 10-11 класс",
+                "path": "files/biology_11.pdf",
+                "subject": "biology"
+            },
+            {   
+                "name": "Адабият 11 класс",
+                "path": "files/adabiyat_11.pdf",
+                "subject": "english"
+            }
+        ]
+    }
+]
